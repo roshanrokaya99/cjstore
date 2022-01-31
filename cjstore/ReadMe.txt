@@ -1,0 +1,85 @@
+Step 1: 
+Copy Paste the project folder to xampp/htdocs directory
+
+Step 2:
+Open XAMPP Control Panel, start 'Apache' and 'MySQL' services
+and
+Go to localhost/phpmyadmin/
+
+Step 3:
+Create A database named "ecomm" using following SQL
+
+CREATE DATABASE ecomm;
+
+USE ecomm;
+
+Step 4:
+Import SQL file named "cjstore.sql" 
+
+Step 4:
+Open the folder includes and open the file "conn.php"
+In the code edit the username and password with your credentials.
+
+Step 5: 
+Open Chrome and paste url: "http://localhost/cjstore/index.php"
+
+Other Info:
+/**
+Customer Account: roshan@user.com	
+user
+
+Admin Account: admin@admin.com
+admin
+
+**//
+
+Sample SQLs:
+
+SELECT * From category;
+
+Describe table category;
+
+Add products
+
+Insert into products(id, category_id, name, description, slug, price, photo, date_view, counter) values
+(20, 7, 'arnott', 
+'<p>This is a very popular biscuit in Australia and is available in many flavours. 
+This is a very popular biscuit in Australia and is available in many flavours
+This is a very popular biscuit in Australia and is available in many flavours
+This is a very popular biscuit in Australia and is available in many flavours
+This is a very popular biscuit in Australia and is available in many flavours</p>'
+,'biscuit', 5.99, 'arnott.jpg', '2020-04-20', 5);
+
+Insert into products(id, category_id, name, description, slug, price, photo, date_view, counter) values
+(40, 8, 'White Wonder White', 
+'<p>This is a very popular bread in Australia and is available in many flavours. 
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours</p>'
+,'bread-helgas', 4.99, 'bread1.jpg', '2020-04-21', 3),
+41, 8, 'Gluten Free Helgas', 
+'<p>This is a very popular bread in Australia and is available in many flavours. 
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours</p>'
+,'bread-helgas', 4.99, 'bread2.jpg', '2020-04-21', 3),
+42, 8, 'Grain Bread Helgas', 
+'<p>This is a very popular bread in Australia and is available in many flavours. 
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours
+This is a very popular Bread in Australia and is available in many flavours</p>'
+,'bread-helgas', 4.99, 'bread3.jpg', '2020-04-21', 3);
+
+SET queries:
+UPDATE category
+SET cat_slug = "Dairy"
+WHERE id = 6;
+
+UPDATE user
+SET type = 1
+WHERE id = 13;
+
+UPDATE USE
